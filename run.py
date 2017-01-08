@@ -10,10 +10,15 @@ while True:
     item = r.rpop('content')
     if item != None:
         # print(item)
-        soup = BeautifulSoup(item)
+        try:
+            soup = BeautifulSoup(item)
 
-        for a in soup.findAll('a', href=True):
-            print a['href']
+            for a in soup.findAll('a', href=True):
+                print a['href']
+
+        except AttributeError as e:
+            pass
+
 
     else:
         time.sleep(1)

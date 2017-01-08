@@ -1,22 +1,22 @@
-# Title
+## Test consumer
 
-## Features
+### Features
+Fetches the jobs from simple redis-queue and parses the content from text data. Then prints out all href-links to stdout.
 
-## How to ..
+### How to
 
-1.
+First install everything in a virtualenv:
 
+```bash
+virtualenv venv
+. ./venv/bin/activate
+pip install -I -r requirements.txt
 ```
-code
+Run the rq-worker (in separate terminal winwod):
+```bash
+cd test-producer
+. ./venv/bin/activate
+python run.py
 ```
 
-2.
-
-
-3.
-
-
-```
-code
-```
 
